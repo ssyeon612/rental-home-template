@@ -1,0 +1,51 @@
+@import './common';
+
+.header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 18 * $unit;
+  z-index: 1000;
+  a {
+    margin-left: 50 * $unit;
+  }
+  img {
+    width: 150 * $unit;
+    margin-left: 10 * $unit;
+  }
+  ul {
+    display: flex;
+    margin-left: auto;
+    margin-right: 50 * $unit;
+    li {
+      margin-left: 15 * $unit;
+    }
+  }
+}
+
+.header_bar {
+ position: fixed;
+ background-color: #6F4F28;
+ transition: 0.3s ease-in-out;
+ color: $white;
+ img {
+  width: 100 * $unit;
+ }
+}
+
+.footer {
+  height: 50 * $unit;
+  text-align: center;
+  background-color: $grey-80;
+  color: $white;
+  font-size: 15 * $unit;
+}
+
+.top_img {
+  height: 750 * $unit;
+}
+
+.main_sec {
+  height: 100rem;
+}

@@ -1,0 +1,59 @@
+//컬러
+$white: #FFFFFF;
+$color-primary: #775843;
+$color-error: #FD3F3F;
+$color-bg: #F3F5FA;
+$grey-3: #F1F3F5;
+$grey-5: #FAFAFA;
+$grey-10: #F5F5F5;
+$grey-20: #EEEEEE;
+$grey-30: #E0E0E0;
+$grey-40: #BDBDBD;
+$grey-50: #9E9E9E;
+$grey-60: #757575;
+$grey-70: #616161;
+$grey-80: #424242;
+$grey-90: #212121;
+$blue-grey-5: #ECEFF1;
+$blue-grey-10: #CFD8DC;
+$blue-grey-20: #B0BEC5;
+$blue-grey-30: #90A4AE;
+$blue-grey-40: #78909C;
+$blue-grey-50: #607D8B;
+$blue-grey-60: #546E7A;
+$blue-grey-70: #455A64;
+$blue-grey-80: #37474F;
+$blue-grey-90: #263238;
+
+
+//폰트
+$thin: 100;
+$light: 300;
+$demiLight: 350;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$black: 900;
+
+//단위
+$unit: 0.1rem;
+$page-padding: 20*$unit;
+$header-height: 50*$unit;
+$tab-depth01-height: 40*$unit;
+$tab-depth02-height: 32*$unit;
+$tab-height: 50*$unit;
+$page-tab-height: 40*$unit;
+$page-btn-height: 40*$unit;
+
+//분기점
+$web-break-width: 1024px;
+$web-page-padding: 34*$unit;
+
+//기타
+$shadow: 0 0 6*$unit rgba(0, 0, 0, 0.15);
+:root {
+  --pt-txt-color: null;
+  --pt-bg-color: null;
+  --progress-percent: null;
+  --party-guide-bg: null;
+}

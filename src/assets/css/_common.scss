@@ -1,0 +1,28 @@
+@import './abstracts/_variavles.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  // font-family: $font-name, sans-serif;
+  font-size: 62.5%; //font-size 10px로 지정(rem 단위 사용을 위한 세팅)
+  // line-height: 1.5;
+  box-sizing: border-box;
+  overflow: scroll;
+  // letter-spacing: -0.01em;
+  // word-break: break-all;
+  // color: $blue-grey-90;
+  // -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%; //-webkit-text-size-adjust 디바이스 폰트 사이즈 설정에 영향받지 않도록 함
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+dl, ul, ol, li {
+  list-style: none;
+}
