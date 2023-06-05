@@ -1,36 +1,65 @@
 @import "./common";
 
 .header {
-  // position: absolute;
+  position: fixed;
+  z-index: 1000;
   width: 100%;
+  top: 0;
+  min-width: 1200px;
+  // position: absolute;
+
   display: flex;
   align-items: center;
   font-size: 18 * $unit;
-  z-index: 1000;
-  a {
-    margin-left: 50 * $unit;
-  }
+  // // padding: 0 20 * $unit;
+  // height: 100px;
   img {
     width: 150 * $unit;
-    margin-left: 10 * $unit;
+    // margin-left: 10 * $unit;
   }
   ul {
     display: flex;
-    margin-left: auto;
-    margin-right: 50 * $unit;
-    li {
-      margin-left: 15 * $unit;
-    }
+    //   // margin-left: auto;
+    //   // margin-right: 50 * $unit;
+    //   li {
+    //     margin-left: 15 * $unit;
+    //   }
   }
+  // position: fixed;
+  // right: 0;
+  // left: 0;
+  // top: 0;
+  // border-bottom: 0;
+  // background-color: rgba(0, 0, 0, 0);
+  // .active {
+  //   background-color: #6f4f28;
+  // }
 }
 
-.header_bar {
-  position: fixed;
-  background-color: #6f4f28;
-  transition: 0.3s ease-in-out;
-  color: $white;
+.active {
+  // height: 100 * $unit;
+  // background-color: #6f4f28;
+  width: 100%;
+  height: 95px;
+  background: #f4f2ed;
+  // position: absolute;
+  // left: 0;
+  // top: 0;
+  // z-index: 1;
+  transition: all 0.5s ease-in-out;
+  // width: 100%;
+  // position: fixed;
+  // transition: 0.3s ease-in-out;
+  // color: $white;
+  // height: 80px;
+  // img {
+  //   width: 100 * $unit;
+  // }
+}
+.menu {
   img {
-    width: 100 * $unit;
+    width: 30 * $unit;
+    display: none;
   }
 }
 
@@ -96,14 +125,14 @@
 }
 
 .main_con {
-  margin: 0 100 * $unit;
+  margin: 100 * $unit;
 }
 
 .main_ttl {
   text-align: center;
   color: $grey-90;
   font-size: 15 * $unit;
-  margin: 40 * $unit 0;
+  margin-bottom: 40 * $unit;
 }
 
 .line {
@@ -124,9 +153,11 @@
     padding: 3rem 0;
     font-size: 15 * $unit;
     border-top: $grey-30 solid 1px;
+    .line {
+      margin-left: 0;
+    }
     .txt {
       width: 50%;
-      text-align: center;
       margin-left: 30 * $unit;
     }
     strong {
