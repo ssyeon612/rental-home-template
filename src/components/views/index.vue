@@ -1,6 +1,6 @@
 <template>
     <div class="wrap" id="wrap">
-        <div class="body" @scroll="handelScroll">
+        <div class="body">
             <router-view v-slot="{ Component }">
                 <TheHeader />
                 <transition name="fade">
@@ -20,12 +20,6 @@ export default {
         TheHeader,
         TheFooter,
     },
-};
-</script>
-
-<script setup lang="ts">
-const handelScroll = (event: Event) => {
-    console.log("event :: {}", event);
 };
 </script>
 

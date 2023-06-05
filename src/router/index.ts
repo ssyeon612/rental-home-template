@@ -1,16 +1,41 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import MainIndex from '@/views/main/index.vue'
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 
-const routes: Array<RouteRecordRaw> = [{
-  path: '/',
-  name: 'main-index',
-  component: MainIndex
-}
-]
+const routes: Array<RouteRecordRaw> = [
+  {
+    path: "/",
+    name: "main-index",
+    component: () => import("@/views/main/index.vue"),
+  },
+  {
+    path: "/rooms",
+    name: "rooms-index",
+    component: () => import("@/views/rooms/index.vue"),
+  },
+  {
+    path: "/service",
+    name: "service-index",
+    component: () => import("@/views/service/index.vue"),
+  },
+  {
+    path: "/reservation",
+    name: "reservation-index",
+    component: () => import("@/views/reservation/index.vue"),
+  },
+  {
+    path: "/location",
+    name: "location-index",
+    component: () => import("@/views/location/index.vue"),
+  },
+  {
+    path: "/customer",
+    name: "customer-index",
+    component: () => import("@/views/customer/index.vue"),
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
