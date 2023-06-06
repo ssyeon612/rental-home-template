@@ -6,7 +6,7 @@
                 <transition name="fade">
                     <component :is="Component" />
                 </transition>
-                <TheFooter />
+                <!-- <TheFooter /> -->
             </router-view>
         </div>
     </div>

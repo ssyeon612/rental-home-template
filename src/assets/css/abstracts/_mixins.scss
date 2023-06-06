@@ -95,7 +95,6 @@
 }
 
 //버튼
-//
 //$border 보더 없으면 0, 있으면 두께 값 입력(픽셀 단위로 설정되어 있음)
 //$radius 형태가 원이면 circle, 양끝이 둥근 형태면 round, 값이 정해져 있으면 레디우스값 입력
 //***보더가 있어서 보더에 색상을 추가할 경우, 배경값도 다시 입력해주어야 함
@@ -118,8 +117,6 @@
   display: flex;
   flex-flow: $align $wrap;
 }
-//$align = row, column
-//$wrap = wrap 필요할 경우 wrap 적용
 
 @mixin flexbox-center($align, $wrap: null){
   display: flex;
@@ -127,4 +124,27 @@
   justify-content: center;
   align-items: center;
 }
-//flexbox-center는 그야말로 가로세로 전부 중앙배열이라서 align-items:center만 필요할 경우에는 flexbox 불러놓고 요소 추가하시는게 나을거예요
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: $color-point;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $color-point;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

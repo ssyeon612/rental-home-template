@@ -1,78 +1,85 @@
-@import "./common";
+@import "./layout";
 
+.logo {
+  width: 150 * $unit;
+}
+
+/* header */
 .header {
   position: fixed;
-  z-index: 1000;
   width: 100%;
   top: 0;
-  min-width: 1200px;
-  // position: absolute;
-
+  z-index: 1000;
+}
+.header_wrap {
+  position: relative;
   display: flex;
   align-items: center;
   font-size: 18 * $unit;
-  // // padding: 0 20 * $unit;
-  // height: 100px;
-  img {
-    width: 150 * $unit;
-    // margin-left: 10 * $unit;
+  max-width: 1200px;
+  margin: 0 30 * $unit;
+  z-index: 999;
+  color: rgb(255, 255, 255);
+  &.active {
+    color: rgb(125, 125, 123);
+    .logo {
+      width: 100 * $unit;
+    }
   }
-  ul {
-    display: flex;
-    //   // margin-left: auto;
-    //   // margin-right: 50 * $unit;
-    //   li {
-    //     margin-left: 15 * $unit;
-    //   }
-  }
-  // position: fixed;
-  // right: 0;
-  // left: 0;
-  // top: 0;
-  // border-bottom: 0;
-  // background-color: rgba(0, 0, 0, 0);
-  // .active {
-  //   background-color: #6f4f28;
-  // }
 }
 
-.active {
-  // height: 100 * $unit;
-  // background-color: #6f4f28;
+
+.header_bg {
+  position: absolute;
   width: 100%;
-  height: 95px;
-  background: #f4f2ed;
-  // position: absolute;
-  // left: 0;
-  // top: 0;
-  // z-index: 1;
+  height: 65 * $unit;
+  background-color: $color-primary;
+  left: 0;
+  top: 0;
+  z-index: 1;
   transition: all 0.5s ease-in-out;
-  // width: 100%;
-  // position: fixed;
-  // transition: 0.3s ease-in-out;
-  // color: $white;
-  // height: 80px;
-  // img {
-  //   width: 100 * $unit;
-  // }
 }
-.menu {
+
+.header_nav {
+  display: flex;
+    margin-left: auto;
+  li {
+    cursor: pointer;
+    margin: 0 10 * $unit;
+    &:hover {
+      border-bottom: $color-point solid 2px;
+      color: $color-point;
+    }
+  }
+}
+
+.header_menu {
+  display: none;
   img {
     width: 30 * $unit;
-    display: none;
+  }
+}
+@media(max-width: 900px) {
+  .header_wrap {
+    ul {
+      display: none;
+    }
+  }
+  .logo {
+    margin: auto;
+  }
+  .header_menu {
+    display: block;
   }
 }
 
+/* footer */
 .footer {
-  // height: 50 * $unit;
   text-align: center;
   background-color: #303030;
   color: #b4b4b4;
   font-size: 12 * $unit;
   ul {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
     li {
       margin: 0 10 * $unit;
       display: inline-block;
@@ -89,13 +96,78 @@
   padding: 15 * $unit 0;
 }
 
-.top_img {
-  height: 750 * $unit;
+/* main */
+
+.main {
+  &_con {
+    position: relative; top: 700px
+  }
 }
 
-.main_sec {
-  height: 100rem;
+.sec {
+  background-color: $color-primary;
+  position: absolute;
+  width: 100%;
+  &_bg {
+    position: fixed;
+     top: 0;
+   ul {
+    min-width: 1200px;
+   }
+  }
+  &_inner {
+    margin: 100 * $unit 0;
+    text-align: center;
+    .logo {
+      margin: auto;
+    }
+  }
+  &_ttl {
+    color: $grey-70;
+    font-size: 26 * $unit;
+    margin-top: 20 * $unit;
+  }
+  &_ttl_sub {
+    font-size: 17 * $unit;
+    color: $grey-50;
+  }
 }
+
+.main_room {
+  ul {
+    margin: 0 50 * $unit;
+  }
+  li {
+    margin: 30 * $unit auto;
+    width: 85%;
+    transition: all 0.4s ease-in;
+    position: relative;
+    &:hover {
+      width: 90%;
+      transition: all 0.4s ease-out;
+    }
+    a {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background: #000;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
 
 .top_banner {
   background: url("../images/main_photo.jpeg") no-repeat;
@@ -124,23 +196,12 @@
   z-index: 1;
 }
 
-.main_con {
-  margin: 100 * $unit;
-}
 
 .main_ttl {
   text-align: center;
   color: $grey-90;
   font-size: 15 * $unit;
   margin-bottom: 40 * $unit;
-}
-
-.line {
-  border: $grey-70 solid 1px;
-  &.sm {
-    width: 10%;
-    margin: 15 * $unit auto;
-  }
 }
 
 .service_list {
@@ -174,12 +235,3 @@
   }
 }
 
-.warn {
-  color: $color-error;
-  font-size: 12 * $unit;
-}
-
-.info_txt {
-  color: darkblue;
-  font-size: 12 * $unit;
-}
