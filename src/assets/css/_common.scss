@@ -13,7 +13,7 @@
 
 html {
   // font-family: $font-name, sans-serif;
-  font-family: 'Crimson Text','SourceHanSerifKR', 돋움, Dotum, sans-serif;
+  // font-family: 'Crimson Text','SourceHanSerifKR', 돋움, Dotum, sans-serif;
   font-size: 62.5%;
   line-height: 1.5;
   box-sizing: border-box;
@@ -26,21 +26,21 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-@media (max-width: 320px) {
-  html {
-      font-size: 56.25%;
-  }
-}
-@media (min-width: 376px) {
-  html {
-      font-size: 68.75%; 
-  }
-}
-@media (min-width: 1024px) {
-  html {
-      font-size: 62.5%;
-  }
-}
+// @media (max-width: 320px) {
+//   html {
+//       font-size: 56.25%;
+//   }
+// }
+// @media (min-width: 376px) {
+//   html {
+//       font-size: 68.75%;
+//   }
+// }
+// @media (min-width: 1024px) {
+//   html {
+//       font-size: 62.5%;
+//   }
+// }
 
 dl,
 ul,
@@ -58,7 +58,17 @@ h6 {
   font-weight: normal;
 }
 
-i, b, em, strong, address, caption, cite, code, dfn, em, var {
+i,
+b,
+em,
+strong,
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
   font-style: normal;
   font-weight: normal;
 }
@@ -86,12 +96,14 @@ button {
   background-color: transparent;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   width: 100%;
   outline: none;
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   &:disabled {
-      opacity: 1; //사파리에서 초기화 필요
+    opacity: 1; //사파리에서 초기화 필요
   }
 }
